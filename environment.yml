@@ -2,7 +2,7 @@ name: gov_areas
 channels:
   - conda-forge
 dependencies:
-  - python=3.12.4
+  - python=3.11.10
   - streamlit=1.36.0
   - pandas=2.2.2
   - geopandas=1.0.0
