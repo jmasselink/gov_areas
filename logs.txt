@@ -1,0 +1,1093 @@
+
+[     UTC     ] Logs for fy24-gov-areas.streamlit.app/
+────────────────────────────────────────────────────────────────────────────────────────
+[18:06:42] 🖥 Provisioning machine...
+[18:06:42] 🎛 Preparing system...
+[18:06:42] ⛓ Spinning up manager process...
+[18:06:44] 🚀 Starting up repository: 'gov_areas', branch: 'main', main module: 'app.py'
+[18:06:44] 🐙 Cloning repository...
+[18:06:46] 🐙 Cloning into '/mount/src/gov_areas'...
+Warning: Permanently added the ED25519 host key for IP address '140.82.116.4' to the list of known hosts.
+
+[18:06:46] 🐙 Cloned repository!
+[18:06:46] 🐙 Pulling code changes from Github...
+[18:06:47] 📦 Processing dependencies...
+Channels:
+ - conda-forge
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... [2024-09-18 18:06:48.668531] info     libmamba Reading cache files '/tmp/tmphj43e684.json.*' for repo index 'installed'
+info     libmamba Reading repodata.json file "/tmp/tmphj43e684.json" for repo installed
+info     libmamba Reading cache files '/home/adminuser/.conda/pkgs/cache/497deca9.json.*' for repo index 'https://conda.anaconda.org/conda-forge/linux-64'
+info     libmamba Reading repodata.json file "/home/adminuser/.conda/pkgs/cache/497deca9.json" for repo https://conda.anaconda.org/conda-forge/linux-64
+info     libmamba Writing libsolv solv file "/home/adminuser/.conda/pkgs/cache/497deca9.solv" for repo https://conda.anaconda.org/conda-forge/linux-64
+info     libmamba Reading cache files '/home/adminuser/.conda/pkgs/cache/09cdf8bf.json.*' for repo index 'https://conda.anaconda.org/conda-forge/noarch'
+info     libmamba Reading repodata.json file "/home/adminuser/.conda/pkgs/cache/09cdf8bf.json" for repo https://conda.anaconda.org/conda-forge/noarch
+info     libmamba Writing libsolv solv file "/home/adminuser/.conda/pkgs/cache/09cdf8bf.solv" for repo https://conda.anaconda.org/conda-forge/noarch
+info     libmamba Reading cache files '/home/adminuser/.conda/pkgs/cache/47929eba.json.*' for repo index 'https://repo.anaconda.com/pkgs/main/linux-64'
+info     libmamba Reading repodata.json file "/home/adminuser/.conda/pkgs/cache/47929eba.json" for repo https://repo.anaconda.com/pkgs/main/linux-64
+info     libmamba Writing libsolv solv file "/home/adminuser/.conda/pkgs/cache/47929eba.solv" for repo https://repo.anaconda.com/pkgs/main/linux-64
+info     libmamba Reading cache files '/home/adminuser/.conda/pkgs/cache/3e39a7aa.json.*' for repo index 'https://repo.anaconda.com/pkgs/main/noarch'
+info     libmamba Reading repodata.json file "/home/adminuser/.conda/pkgs/cache/3e39a7aa.json" for repo https://repo.anaconda.com/pkgs/main/noarch
+info     libmamba Writing libsolv solv file "/home/adminuser/.conda/pkgs/cache/3e39a7aa.solv" for repo https://repo.anaconda.com/pkgs/main/noarch
+info     libmamba Reading cache files '/home/adminuser/.conda/pkgs/cache/2ce54b42.json.*' for repo index 'https://repo.anaconda.com/pkgs/r/linux-64'
+info     libmamba Reading repodata.json file "/home/adminuser/.conda/pkgs/cache/2ce54b42.json" for repo https://repo.anaconda.com/pkgs/r/linux-64
+info     libmamba Writing libsolv solv file "/home/adminuser/.conda/pkgs/cache/2ce54b42.solv" for repo https://repo.anaconda.com/pkgs/r/linux-64
+info     libmamba Reading cache files '/home/adminuser/.conda/pkgs/cache/4ea078d6.json.*' for repo index 'https://repo.anaconda.com/pkgs/r/noarch'
+info     libmamba Reading repodata.json file "/home/adminuser/.conda/pkgs/cache/4ea078d6.json" for repo https://repo.anaconda.com/pkgs/r/noarch
+info     libmamba Writing libsolv solv file "/home/adminuser/.conda/pkgs/cache/4ea078d6.solv" for repo https://repo.anaconda.com/pkgs/r/noarch
+done
+Solving environment: ...working... [2024-09-18 18:07:02.616784] info     libmamba Parsing MatchSpec streamlit=1.36.0
+info     libmamba Parsing MatchSpec streamlit=1.36.0
+info     libmamba Adding job: streamlit=1.36.0
+info     libmamba Parsing MatchSpec pandas=2.2.2
+info     libmamba Parsing MatchSpec pandas=2.2.2
+info     libmamba Adding job: pandas=2.2.2
+info     libmamba Parsing MatchSpec leafmap=0.35.1
+info     libmamba Parsing MatchSpec leafmap=0.35.1
+info     libmamba Adding job: leafmap=0.35.1
+info     libmamba Parsing MatchSpec geopandas=1.0.0
+info     libmamba Parsing MatchSpec geopandas=1.0.0
+info     libmamba Adding job: geopandas=1.0.0
+info     libmamba Parsing MatchSpec wheel
+info     libmamba Parsing MatchSpec wheel
+info     libmamba Adding job: wheel
+info     libmamba Parsing MatchSpec setuptools
+info     libmamba Parsing MatchSpec setuptools
+info     libmamba Adding job: setuptools
+info     libmamba Parsing MatchSpec pip
+info     libmamba Parsing MatchSpec pip
+info     libmamba Adding job: pip
+info     libmamba Parsing MatchSpec menuinst
+info     libmamba Parsing MatchSpec menuinst
+info     libmamba Adding job: menuinst
+info     libmamba Parsing MatchSpec conda-libmamba-solver
+info     libmamba Parsing MatchSpec conda-libmamba-solver
+info     libmamba Adding job: conda-libmamba-solver
+info     libmamba Parsing MatchSpec conda-content-trust
+info     libmamba Parsing MatchSpec conda-content-trust
+info     libmamba Adding job: conda-content-trust
+info     libmamba Parsing MatchSpec anaconda-anon-usage
+info     libmamba Parsing MatchSpec anaconda-anon-usage
+info     libmamba Adding job: anaconda-anon-usage
+info     libmamba Parsing MatchSpec python=3.11.10
+info     libmamba Parsing MatchSpec python=3.11.10
+info     libmamba Parsing MatchSpec conda
+info     libmamba Parsing MatchSpec conda
+info     libmamba Parsing MatchSpec openssl
+info     libmamba Parsing MatchSpec openssl
+info     libmamba Parsing MatchSpec certifi
+info     libmamba Parsing MatchSpec certifi
+info     libmamba Parsing MatchSpec ca-certificates
+info     libmamba Parsing MatchSpec ca-certificates
+info     libmamba Parsing MatchSpec python
+info     libmamba Parsing MatchSpec python
+info     libmamba Parsing MatchSpec conda
+info     libmamba Parsing MatchSpec conda
+info     libmamba Parsing MatchSpec openssl
+info     libmamba Parsing MatchSpec openssl
+info     libmamba Parsing MatchSpec certifi
+info     libmamba Parsing MatchSpec certifi
+info     libmamba Parsing MatchSpec ca-certificates
+info     libmamba Parsing MatchSpec ca-certificates
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::python==3.12.5=h5148396_1
+info     libmamba Adding job: pkgs/main/linux-64::python==3.12.5=h5148396_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::conda==24.7.1=py312h06a4308_0
+info     libmamba Adding job: pkgs/main/linux-64::conda==24.7.1=py312h06a4308_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::wheel==0.43.0=py312h06a4308_0
+info     libmamba Adding job: pkgs/main/linux-64::wheel==0.43.0=py312h06a4308_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::setuptools==69.5.1=py312h06a4308_0
+info     libmamba Adding job: pkgs/main/linux-64::setuptools==69.5.1=py312h06a4308_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::pip==24.0=py312h06a4308_0
+info     libmamba Adding job: pkgs/main/linux-64::pip==24.0=py312h06a4308_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::menuinst==2.0.2=py312h06a4308_1
+info     libmamba Adding job: pkgs/main/linux-64::menuinst==2.0.2=py312h06a4308_1
+info     libmamba Parsing MatchSpec pkgs/main/noarch::conda-libmamba-solver==24.7.0=pyhd3eb1b0_0
+info     libmamba Adding job: pkgs/main/noarch::conda-libmamba-solver==24.7.0=pyhd3eb1b0_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::conda-content-trust==0.2.0=py312h06a4308_1
+info     libmamba Adding job: pkgs/main/linux-64::conda-content-trust==0.2.0=py312h06a4308_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::anaconda-anon-usage==0.4.4=py312hfc0e8ea_100
+info     libmamba Adding job: pkgs/main/linux-64::anaconda-anon-usage==0.4.4=py312hfc0e8ea_100
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::openssl==3.0.15=h5eee18b_0
+info     libmamba Adding job: pkgs/main/linux-64::openssl==3.0.15=h5eee18b_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::certifi==2024.8.30=py312h06a4308_0
+info     libmamba Adding job: pkgs/main/linux-64::certifi==2024.8.30=py312h06a4308_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::ca-certificates==2024.7.2=h06a4308_0
+info     libmamba Adding job: pkgs/main/linux-64::ca-certificates==2024.7.2=h06a4308_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::_libgcc_mutex==0.1=main
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::_libgcc_mutex==0.1=main
+info     libmamba Adding job: pkgs/main/linux-64::_libgcc_mutex==0.1=main
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::_openmp_mutex==5.1=1_gnu
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::_openmp_mutex==5.1=1_gnu
+info     libmamba Adding job: pkgs/main/linux-64::_openmp_mutex==5.1=1_gnu
+info     libmamba Parsing MatchSpec pkgs/main/noarch::archspec==0.2.3=pyhd3eb1b0_0
+info     libmamba Parsing MatchSpec pkgs/main/noarch::archspec==0.2.3=pyhd3eb1b0_0
+info     libmamba Adding job: pkgs/main/noarch::archspec==0.2.3=pyhd3eb1b0_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::bzip2==1.0.8=h5eee18b_6
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::bzip2==1.0.8=h5eee18b_6
+info     libmamba Adding job: pkgs/main/linux-64::bzip2==1.0.8=h5eee18b_6
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::c-ares==1.19.1=h5eee18b_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::c-ares==1.19.1=h5eee18b_0
+info     libmamba Adding job: pkgs/main/linux-64::c-ares==1.19.1=h5eee18b_0
+info     libmamba Parsing MatchSpec pkgs/main/noarch::charset-normalizer==2.0.4=pyhd3eb1b0_0
+info     libmamba Parsing MatchSpec pkgs/main/noarch::charset-normalizer==2.0.4=pyhd3eb1b0_0
+info     libmamba Adding job: pkgs/main/noarch::charset-normalizer==2.0.4=pyhd3eb1b0_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::expat==2.6.3=h6a678d5_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::expat==2.6.3=h6a678d5_0
+info     libmamba Adding job: pkgs/main/linux-64::expat==2.6.3=h6a678d5_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::fmt==9.1.0=hdb19cb5_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::fmt==9.1.0=hdb19cb5_1
+info     libmamba Adding job: pkgs/main/linux-64::fmt==9.1.0=hdb19cb5_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::icu==73.1=h6a678d5_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::icu==73.1=h6a678d5_0
+info     libmamba Adding job: pkgs/main/linux-64::icu==73.1=h6a678d5_0
+info     libmamba Parsing MatchSpec pkgs/main/noarch::jsonpointer==2.1=pyhd3eb1b0_0
+info     libmamba Parsing MatchSpec pkgs/main/noarch::jsonpointer==2.1=pyhd3eb1b0_0
+info     libmamba Adding job: pkgs/main/noarch::jsonpointer==2.1=pyhd3eb1b0_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::krb5==1.20.1=h143b758_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::krb5==1.20.1=h143b758_1
+info     libmamba Adding job: pkgs/main/linux-64::krb5==1.20.1=h143b758_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::ld_impl_linux-64==2.38=h1181459_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::ld_impl_linux-64==2.38=h1181459_1
+info     libmamba Adding job: pkgs/main/linux-64::ld_impl_linux-64==2.38=h1181459_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libarchive==3.6.2=h6ac8c49_3
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libarchive==3.6.2=h6ac8c49_3
+info     libmamba Adding job: pkgs/main/linux-64::libarchive==3.6.2=h6ac8c49_3
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libcurl==8.7.1=h251f7ec_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libcurl==8.7.1=h251f7ec_0
+info     libmamba Adding job: pkgs/main/linux-64::libcurl==8.7.1=h251f7ec_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libedit==3.1.20230828=h5eee18b_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libedit==3.1.20230828=h5eee18b_0
+info     libmamba Adding job: pkgs/main/linux-64::libedit==3.1.20230828=h5eee18b_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libev==4.33=h7f8727e_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libev==4.33=h7f8727e_1
+info     libmamba Adding job: pkgs/main/linux-64::libev==4.33=h7f8727e_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libffi==3.4.4=h6a678d5_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libffi==3.4.4=h6a678d5_1
+info     libmamba Adding job: pkgs/main/linux-64::libffi==3.4.4=h6a678d5_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libgcc-ng==11.2.0=h1234567_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libgcc-ng==11.2.0=h1234567_1
+info     libmamba Adding job: pkgs/main/linux-64::libgcc-ng==11.2.0=h1234567_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libgomp==11.2.0=h1234567_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libgomp==11.2.0=h1234567_1
+info     libmamba Adding job: pkgs/main/linux-64::libgomp==11.2.0=h1234567_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libmamba==1.5.8=hfe524e5_2
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libmamba==1.5.8=hfe524e5_2
+info     libmamba Adding job: pkgs/main/linux-64::libmamba==1.5.8=hfe524e5_2
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libnghttp2==1.57.0=h2d74bed_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libnghttp2==1.57.0=h2d74bed_0
+info     libmamba Adding job: pkgs/main/linux-64::libnghttp2==1.57.0=h2d74bed_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libsolv==0.7.24=he621ea3_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libsolv==0.7.24=he621ea3_1
+info     libmamba Adding job: pkgs/main/linux-64::libsolv==0.7.24=he621ea3_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libssh2==1.11.0=h251f7ec_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libssh2==1.11.0=h251f7ec_0
+info     libmamba Adding job: pkgs/main/linux-64::libssh2==1.11.0=h251f7ec_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libstdcxx-ng==11.2.0=h1234567_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libstdcxx-ng==11.2.0=h1234567_1
+info     libmamba Adding job: pkgs/main/linux-64::libstdcxx-ng==11.2.0=h1234567_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libuuid==1.41.5=h5eee18b_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libuuid==1.41.5=h5eee18b_0
+info     libmamba Adding job: pkgs/main/linux-64::libuuid==1.41.5=h5eee18b_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libxml2==2.10.4=hfdd30dd_2
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::libxml2==2.10.4=hfdd30dd_2
+info     libmamba Adding job: pkgs/main/linux-64::libxml2==2.10.4=hfdd30dd_2
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::lz4-c==1.9.4=h6a678d5_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::lz4-c==1.9.4=h6a678d5_1
+info     libmamba Adding job: pkgs/main/linux-64::lz4-c==1.9.4=h6a678d5_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::ncurses==6.4=h6a678d5_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::ncurses==6.4=h6a678d5_0
+info     libmamba Adding job: pkgs/main/linux-64::ncurses==6.4=h6a678d5_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::pcre2==10.42=hebb0a14_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::pcre2==10.42=hebb0a14_1
+info     libmamba Adding job: pkgs/main/linux-64::pcre2==10.42=hebb0a14_1
+info     libmamba Parsing MatchSpec pkgs/main/noarch::pybind11-abi==5=hd3eb1b0_0
+info     libmamba Parsing MatchSpec pkgs/main/noarch::pybind11-abi==5=hd3eb1b0_0
+info     libmamba Adding job: pkgs/main/noarch::pybind11-abi==5=hd3eb1b0_0
+info     libmamba Parsing MatchSpec pkgs/main/noarch::pycparser==2.21=pyhd3eb1b0_0
+info     libmamba Parsing MatchSpec pkgs/main/noarch::pycparser==2.21=pyhd3eb1b0_0
+info     libmamba Adding job: pkgs/main/noarch::pycparser==2.21=pyhd3eb1b0_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::readline==8.2=h5eee18b_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::readline==8.2=h5eee18b_0
+info     libmamba Adding job: pkgs/main/linux-64::readline==8.2=h5eee18b_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::reproc==14.2.4=h6a678d5_2
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::reproc==14.2.4=h6a678d5_2
+info     libmamba Adding job: pkgs/main/linux-64::reproc==14.2.4=h6a678d5_2
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::reproc-cpp==14.2.4=h6a678d5_2
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::reproc-cpp==14.2.4=h6a678d5_2
+info     libmamba Adding job: pkgs/main/linux-64::reproc-cpp==14.2.4=h6a678d5_2
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::sqlite==3.45.3=h5eee18b_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::sqlite==3.45.3=h5eee18b_0
+info     libmamba Adding job: pkgs/main/linux-64::sqlite==3.45.3=h5eee18b_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::tk==8.6.14=h39e8969_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::tk==8.6.14=h39e8969_0
+info     libmamba Adding job: pkgs/main/linux-64::tk==8.6.14=h39e8969_0
+info     libmamba Parsing MatchSpec pkgs/main/noarch::tzdata==2024a=h04d1e81_0
+info     libmamba Parsing MatchSpec pkgs/main/noarch::tzdata==2024a=h04d1e81_0
+info     libmamba Adding job: pkgs/main/noarch::tzdata==2024a=h04d1e81_0
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::xz==5.4.6=h5eee18b_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::xz==5.4.6=h5eee18b_1
+info     libmamba Adding job: pkgs/main/linux-64::xz==5.4.6=h5eee18b_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::yaml-cpp==0.8.0=h6a678d5_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::yaml-cpp==0.8.0=h6a678d5_1
+info     libmamba Adding job: pkgs/main/linux-64::yaml-cpp==0.8.0=h6a678d5_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::zlib==1.2.13=h5eee18b_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::zlib==1.2.13=h5eee18b_1
+info     libmamba Adding job: pkgs/main/linux-64::zlib==1.2.13=h5eee18b_1
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::zstd==1.5.5=hc292b87_2
+info     libmamba Parsing MatchSpec pkgs/main/linux-64::zstd==1.5.5=hc292b87_2
+info     libmamba Adding job: pkgs/main/linux-64::zstd==1.5.5=hc292b87_2
+[18:07:19] 🐍 Python dependencies were installed from /mount/src/gov_areas/environment.yml using conda.
+Check if streamlit is installed
+
+──────────────────────────────── Installing Streamlit ──────────────────────────────────
+
+Using uv pip install.
+Resolved 41 packages in 320ms
+Downloaded [2024-09-18 18:07:22.467492] 35 packages[2024-09-18 18:07:22.467871]  in 1.83s[2024-09-18 18:07:22.469353] 
+Installed 35 packages in 116ms
+ + altair==5.4.1
+ + attrs==24.2.0
+ + blinker==1.8.2
+ + cachetools==5.5.0
+ + click==8.1.7
+ + gitdb==4.0.11
+ + gitpython==3.1.43
+ + jinja2==3.1.4
+ + jsonschema==4.23.0
+ + jsonschema-specifications==2023.12.1
+ + markdown-it-py==3.0.0
+ + markupsafe==2.1.5
+ + mdurl==0.1.2
+ + narwhals==1.8.1
+ + numpy==2.1.1
+ + pandas==2.2.2
+ + pillow==10.4.0
+ + protobuf==5.28.1
+ + pyarrow==17.0.0
+ [2024-09-18 18:07:22.587734] + pydeck==0.9.1
+ + pygments==2.18.0
+ + python-dateutil==2.9.0.post0
+ + pytz==2024.2
+ + referencing==0.35.1
+ + rich==13.8.1
+ +[2024-09-18 18:07:22.587929]  rpds-py==0.20.0
+ + six==1.16.0
+ + smmap==5.0.1
+ + streamlit==1.38.0
+ + tenacity==8.5.0
+ + toml==0.10.2
+ + tornado==6.4.1
+ + typing-extensions==4.12.2
+ + tzdata==2024.1
+ + watchdog==4.0.2
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[18:07:22] 📦 Processed dependencies!
+
+
+
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+[18:11:47] ❗️ 
+2024-09-18 18:11:47.212 503 GET /script-health-check (127.0.0.1) 102.23ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:11:52.230 503 GET /script-health-check (127.0.0.1) 105.42ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:11:57.215 503 GET /script-health-check (127.0.0.1) 102.22ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:12:02.225 503 GET /script-health-check (127.0.0.1) 104.43ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:12:07.222 503 GET /script-health-check (127.0.0.1) 102.21ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:12:12.171 503 GET /script-health-check (127.0.0.1) 102.42ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:12:17.167 503 GET /script-health-check (127.0.0.1) 103.12ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:12:22.222 503 GET /script-health-check (127.0.0.1) 101.78ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:12:27.199 503 GET /script-health-check (127.0.0.1) 101.98ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:12:32.187 503 GET /script-health-check (127.0.0.1) 101.97ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:12:37.249 503 GET /script-health-check (127.0.0.1) 101.47ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:12:42.265 503 GET /script-health-check (127.0.0.1) 103.38ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:12:47.139 503 GET /script-health-check (127.0.0.1) 37.09ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:12:52.163 503 GET /script-health-check (127.0.0.1) 101.78ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:12:57.235 503 GET /script-health-check (127.0.0.1) 105.05ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:13:02.252 503 GET /script-health-check (127.0.0.1) 103.75ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:13:07.151 503 GET /script-health-check (127.0.0.1) 101.79ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:13:12.230 503 GET /script-health-check (127.0.0.1) 102.30ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:13:17.242 503 GET /script-health-check (127.0.0.1) 103.05ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:13:22.227 503 GET /script-health-check (127.0.0.1) 102.03ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:13:27.190 503 GET /script-health-check (127.0.0.1) 102.09ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:13:32.210 503 GET /script-health-check (127.0.0.1) 101.78ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:13:37.219 503 GET /script-health-check (127.0.0.1) 102.04ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:13:42.256 503 GET /script-health-check (127.0.0.1) 102.48ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:13:47.236 503 GET /script-health-check (127.0.0.1) 102.39ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:13:52.253 503 GET /script-health-check (127.0.0.1) 101.98ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:13:57.237 503 GET /script-health-check (127.0.0.1) 101.91ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:14:02.241 503 GET /script-health-check (127.0.0.1) 106.37ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:14:07.220 503 GET /script-health-check (127.0.0.1) 103.38ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:14:12.267 503 GET /script-health-check (127.0.0.1) 107.80ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:14:17.245 503 GET /script-health-check (127.0.0.1) 101.95ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:14:22.242 503 GET /script-health-check (127.0.0.1) 102.93ms
+[18:14:24] 🐙 Pulling code changes from Github...
+[18:14:25] 📦 Processing dependencies...
+[18:14:25] 📦 Processed dependencies!
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:14:27.260 503 GET /script-health-check (127.0.0.1) 101.79ms
+[18:14:27] 🔄 Updated app!
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:14:32.239 503 GET /script-health-check (127.0.0.1) 102.91ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:14:37.211 503 GET /script-health-check (127.0.0.1) 102.06ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:14:42.271 503 GET /script-health-check (127.0.0.1) 44.51ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:14:47.245 503 GET /script-health-check (127.0.0.1) 102.97ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:14:52.160 503 GET /script-health-check (127.0.0.1) 103.04ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:14:57.288 503 GET /script-health-check (127.0.0.1) 102.29ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:15:02.249 503 GET /script-health-check (127.0.0.1) 102.45ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:15:07.226 503 GET /script-health-check (127.0.0.1) 102.55ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:15:12.194 503 GET /script-health-check (127.0.0.1) 102.18ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:15:17.196 503 GET /script-health-check (127.0.0.1) 102.78ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:15:22.245 503 GET /script-health-check (127.0.0.1) 105.42ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:15:27.250 503 GET /script-health-check (127.0.0.1) 103.54ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/exec_code.py:88 in exec_func_with_error_handling                       
+                                                                                
+  /home/adminuser/.conda/lib/python3.12/site-packages/streamlit/runtime/script  
+  runner/script_runner.py:590 in code_to_exec                                   
+                                                                                
+  /mount/src/gov_areas/app.py:2 in <module>                                     
+                                                                                
+      1 import streamlit as st                                                  
+  ❱   2 import geopandas as gpd                                                 
+      3 import pandas as pd                                                     
+      4 import leafmap.foliumap as leafmap                                      
+      5 from datetime import datetime, date                                     
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'geopandas'
+2024-09-18 18:15:32.225 503 GET /script-health-check (127.0.0.1) 102.36ms
