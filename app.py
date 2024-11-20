@@ -12,9 +12,8 @@ st.subheader(page_title)
 # Load the spatial data
 @st.cache_data
 def load_data():
-    # counties = gpd.read_file('data/20240807_qnmc_county.geojson')
-    counties = gpd.read_file('data/20240916_gov_area_county.geojson')
-    tracts = gpd.read_file('data/20240916_gov_area_tract.geojson')
+    counties = gpd.read_file('data/20241120_gov_area_county.geojson') #20240916_gov_area_county
+    tracts = gpd.read_file('data/20241120_gov_area_tract.geojson')
     return counties, tracts
 
 counties, tracts = load_data()
