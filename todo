@@ -1,0 +1,31 @@
+import streamlit as st
+import pandas as pd
+import geopandas as gpd
+
+# Load your data
+tracts = gpd.read_file('path_to_your_tracts_shapefile.shp')
+counties = gpd.read_file('path_to_your_counties_shapefile.shp')
+
+# Sidebar filters
+st.sidebar.header("Filters")
+selected_state = st.sidebar.selectbox("Select State", tracts['STATE_NAME'].unique())
+
+# Filter data by selected state
+filtered_tracts = tracts[tracts['STATE_NAME'] == selected_state]
+filtered_counties = counties[counties['STATE_NAME'] == selected_state]
+
+# Calculate total number of eligible tracts and counties
+total_tracts = len(filtered_tracts)
+total_counties = len(filtered_counties)
+
+# Display total counts
+st.write(f"Total eligible tracts: {total_tracts}")
+st.write(f"Total eligible counties: {total_counties}")
+
+# Display map
+st.map(filtered_tracts)
+
+# Display filterable table
+st.write("Selected Entities")
+selected_entities = pd.concat([filtered_tracts, filtered_counties])
+st.dataframe(selected_entities)

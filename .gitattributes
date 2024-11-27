@@ -1,0 +1,5 @@
+data/20241120_gov_area_county.geojson filter=lfs diff=lfs merge=lfs -text
+data/20241120_gov_area_county.tract filter=lfs diff=lfs merge=lfs -text
+data/sba_gov_elig_county.geojson filter=lfs diff=lfs merge=lfs -text
+data/sba_gov_elig_tract.geojson filter=lfs diff=lfs merge=lfs -text
+data/sba_gov_elig_tract_al.geojson filter=lfs diff=lfs merge=lfs -text
