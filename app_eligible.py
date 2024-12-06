@@ -31,21 +31,12 @@ st.markdown(custom_css, unsafe_allow_html=True)
 @st.cache_data
 def load_data():
     counties = gpd.read_file('data/sba_gov_elig_county.geojson') #20240916_gov_area_county
-    tracts = gpd.read_file('data/sba_gov_elig_tract_al.geojson')
+    tracts = gpd.read_file('data/sba_gov_elig_tract.geojson')
     return counties, tracts
-    # return counties 
 
-# counties = load_data()
 counties, tracts = load_data()
 
-# Create a Streamlit app
-# st.sidebar.title('Filter by Expiration Date')
-
 # Extract unique state values from both counties and tracts
-# unique_states = sorted(pd.concat([counties['state_name'], tracts['state_name']]).unique())
-
-# just counties for now
-# unique_states = sorted(counties['statefp'].unique())
 unique_states = sorted(pd.concat([counties['statefp'], tracts['statefp']]).unique())
 
 # add a checkbox to the sidebar
@@ -61,6 +52,7 @@ selected_states = st.sidebar.multiselect(
 # Sort the selected states
 selected_states.sort()
 
+# Filter the data based on the selected states
 if selected_states:
     filtered_counties = counties[counties['statefp'].isin(selected_states)]
     filtered_tracts = tracts[tracts['statefp'].isin(selected_states)]
@@ -73,15 +65,25 @@ st.sidebar.write(f"Number of selected counties: {len(filtered_counties)}")
 st.sidebar.write(f"Number of selected tracts: {len(filtered_tracts)}")
 
 # Count the number of county features per state
-county_state_counts = counties['statefp'].value_counts().sort_index()
-tract_state_counts = tracts['statefp'].value_counts().sort_index()
+if not filtered_counties.empty:
+    county_state_counts = filtered_counties['statefp'].value_counts().sort_index()
+else:
+    county_state_counts = pd.Series(dtype=int)
+
+if not filtered_tracts.empty:
+    tract_state_counts = filtered_tracts['statefp'].value_counts().sort_index()
+else:
+    tract_state_counts = pd.Series(dtype=int)
+    #county_state_counts = counties['statefp'].value_counts().sort_index()
 
 # Display counts of in the sidebar and list counties
-st.sidebar.write("Count of counties and tracts per state:")
-for state in selected_states: #_counts.items():
-    county_count = county_state_counts.get(state, 0)
-    tract_count =tract_state_counts.get(state, 0)
-    st.sidebar.write(f"State {state}: {county_count} counties, {tract_count} tracts")
+if selected_states:
+    for state in selected_states: #_counts.items():
+        county_count = county_state_counts.get(state, 0)
+        tract_count =tract_state_counts.get(state, 0)
+        st.sidebar.write(f"State {state}: {county_count} counties, {tract_count} tracts")
+else:
+    st.sidebar.write("No states selected.")
 
 # for state, count in state_counts.items():
 #     st.sidebar.write(f"{state}: {count}")
@@ -124,7 +126,6 @@ def style_tracts(feature):
 def style_states(feature):
     return {
         'fillColor': 'none',
-        # 'color': 'red',
         'stroke': True,
         'color': 'black',
         'weight': 0.2,
@@ -160,7 +161,7 @@ if not filtered_tracts.empty:
         layer_name='Tracts',
         style_function=style_tracts,  # Apply the style dictionary directly
         # style_dict=style_counties(),  # Apply the style dictionary directly
-        info_mode='on_hover'
+        info_mode='on_click' #'on_hover'
     )
 
 polygons = "https://raw.githubusercontent.com/opengeos/leafmap/master/examples/data/us_states.json"
