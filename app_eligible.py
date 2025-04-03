@@ -31,7 +31,7 @@ st.markdown(custom_css, unsafe_allow_html=True)
 @st.cache_data
 def load_data():
     counties = gpd.read_file('data/sba_gov_elig_county.geojson') #20240916_gov_area_county
-    tracts = gpd.read_file('data/sba_gov_elig_tract.geojson')
+    tracts = gpd.read_file('data/sba_gov_elig_tract_al.geojson')
     return counties, tracts
 
 counties, tracts = load_data()
