@@ -12,26 +12,30 @@ st.subheader(page_title)
 # Load the spatial data
 @st.cache_data
 def load_data():
-    counties = gpd.read_file('data/20241220_gov_area_county.geojson') #20240916_gov_area_county
-    tracts = gpd.read_file('data/20241220_gov_area_tract.geojson')
+    counties = gpd.read_file('data/20250403_gda_county.geojson') #20240916_gov_area_county
+    tracts = gpd.read_file('data/20250403_gda_tract.geojson')
     return counties, tracts
 
 counties, tracts = load_data()
 
 # Convert disaster declaration dates to datetime
-counties['expires'] = pd.to_datetime(counties['expires'], errors='coerce')
-tracts['expires'] = pd.to_datetime(tracts['expires'], errors='coerce')
+counties['date_approved'] = pd.to_datetime(counties['date_approved'], errors='coerce')
+tracts['date_approved'] = pd.to_datetime(tracts['date_approved'], errors='coerce')
 
-# Drop rows with NaT in 'expires'
-counties = counties.dropna(subset=['expires'])
-tracts = tracts.dropna(subset=['expires'])
+# Drop rows with NaT in 'date_approved'
+counties = counties.dropna(subset=['date_approved'])
+tracts = tracts.dropna(subset=['date_approved'])
 
 # Get the date range for the slider
-min_date = counties['expires'].min().date()
-max_date = counties['expires'].max().date()
+combined_dates = pd.concat([counties['date_approved'], tracts['date_approved']])
+min_date = combined_dates.min().date()
+max_date = combined_dates.max().date()
+
+# min_date = tracts['date_approved'].min().date()
+# max_date = counties['date_approved'].max().date()
 
 # Create a Streamlit app
-st.sidebar.title('Filter by Expiration Date')
+st.sidebar.title('Filter by Approval Date')
 
 # Slider for selecting the date range
 try:
@@ -42,7 +46,8 @@ try:
         value=(min_date, max_date),
         format="YYYY-MM-DD"
     )
-    st.write("Expiration date range:", start_date, "to", end_date)
+    expiration_date=date(2028, 6, 30)
+    st.write("Approval date range:", start_date, "to", end_date, "; Expiration date:", expiration_date) #, end_date)
 except Exception as e:
     st.error(f"Error in slider configuration: {e}")
 
@@ -67,18 +72,18 @@ end_datetime = datetime.combine(end_date, datetime.max.time())
 
 # Filter the data based on the selected date range and states
 if selected_states: #toggle_state:
-    filtered_counties = counties[(counties['expires'] >= start_datetime) & (counties['expires'] <= end_datetime) & (counties['state_name'].isin(selected_states))]
-    filtered_tracts = tracts[(tracts['expires'] >= start_datetime) & (tracts['expires'] <= end_datetime) & (tracts['state_name'].isin(selected_states))]
+    filtered_counties = counties[(counties['date_approved'] >= start_datetime) & (counties['date_approved'] <= end_datetime) & (counties['state_name'].isin(selected_states))]
+    filtered_tracts = tracts[(tracts['date_approved'] >= start_datetime) & (tracts['date_approved'] <= end_datetime) & (tracts['state_name'].isin(selected_states))]
 else:
     filtered_counties = gpd.GeoDataFrame(columns=counties.columns)
     filtered_tracts = gpd.GeoDataFrame(columns=tracts.columns)
 
-# Ensure that filtered data is JSON serializable by converting 'expires' to string if it exists
-if not filtered_counties.empty and 'expires' in filtered_counties.columns:
-    filtered_counties['expires'] = filtered_counties['expires'].dt.strftime('%Y-%m-%d')
+# Ensure that filtered data is JSON serializable by converting 'date_approved' to string if it exists
+if not filtered_counties.empty and 'date_approved' in filtered_counties.columns:
+    filtered_counties['date_approved'] = filtered_counties['date_approved'].dt.strftime('%Y-%m-%d')
 
-if not filtered_tracts.empty and 'expires' in filtered_tracts.columns:
-    filtered_tracts['expires'] = filtered_tracts['expires'].dt.strftime('%Y-%m-%d')
+if not filtered_tracts.empty and 'date_approved' in filtered_tracts.columns:
+    filtered_tracts['date_approved'] = filtered_tracts['date_approved'].dt.strftime('%Y-%m-%d')
 
 for column in filtered_counties.select_dtypes(include=['datetime64']).columns:
     filtered_counties[column] = filtered_counties[column].dt.strftime('%Y-%m-%d')
@@ -86,15 +91,15 @@ for column in filtered_counties.select_dtypes(include=['datetime64']).columns:
 for column in filtered_tracts.select_dtypes(include=['datetime64']).columns:
     filtered_tracts[column] = filtered_tracts[column].dt.strftime('%Y-%m-%d')
 
-# Display the number of selected counties and tracts in the sidebar
-st.sidebar.write(f"Number of selected counties: {len(filtered_counties)}")
-st.sidebar.write(f"Number of selected tracts: {len(filtered_tracts)}")
-
-# Use the state of the checkbox to conditionally display the data
-if selected_states: #toggle_state:
-    st.write("Number of selected states:", len(selected_states)) #('Filtered Counties:', filtered_counties)
+if selected_states:
+    st.write(f"Selected states:", len(selected_states),
+             f"counties:", len(filtered_counties),
+             f"tracts:", len(filtered_tracts))
 else:
-    st.write("No states selected.") #'Filtered Tracts:', filtered_tracts)
+    st.write("No states, counties, or tracts selected.")
+
+# st.write(f"Number of selected counties: {len(filtered_counties)}")
+# st.write(f"Number of selected tracts: {len(filtered_tracts)}")
 
 # Define style functions for counties and tracts
 def style_counties(feature):
@@ -112,6 +117,9 @@ def style_tracts(feature):
         'weight': 1,
         'fillOpacity': 0.6
     }
+
+if st.button('Clear Cache'):
+    st.cache_data.clear()
 
 # Create a Folium map
 m = leafmap.Map(
