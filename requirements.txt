@@ -58,7 +58,7 @@ pexpect==4.9.0
 pillow==10.4.0
 plotly==5.24.1
 prompt_toolkit==3.0.47
-protobuf==5.28.1
+protobuf==5.29.5
 psygnal==0.11.1
 ptyprocess==0.7.0
 pure_eval==0.2.3
