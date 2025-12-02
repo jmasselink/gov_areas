@@ -20,7 +20,7 @@ exceptiongroup==1.2.2
 executing==2.1.0
 filelock==3.16.1
 folium==0.17.0
-fonttools==4.53.1
+fonttools==4.61.0
 gdown==5.2.0
 geojson==3.1.0
 geopandas==1.0.1
@@ -80,7 +80,7 @@ requests==2.32.3
 rich==13.8.1
 rpds-py==0.20.0
 scooby==0.10.0
-setuptools==78.1.0
+setuptools==78.1.1
 shapely==2.0.6
 six==1.16.0
 smmap==5.0.1
@@ -89,7 +89,7 @@ stack-data==0.6.3
 streamlit==1.38.0
 tenacity==8.5.0
 toml==0.10.2
-tornado==6.4.2
+tornado==6.5
 tqdm==4.66.5
 traitlets==5.14.3
 traittypes==0.2.1
