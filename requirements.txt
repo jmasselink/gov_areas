@@ -95,7 +95,7 @@ traitlets==5.14.3
 traittypes==0.2.1
 typing_extensions==4.12.2
 tzdata==2024.1
-urllib3==2.2.3
+urllib3==2.6.0
 wcwidth==0.2.13
 whitebox==2.3.5
 whiteboxgui==2.3.0
