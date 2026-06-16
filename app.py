@@ -46,7 +46,7 @@ try:
         value=(min_date, max_date),
         format="YYYY-MM-DD"
     )
-    expiration_date=date(2028, 6, 30)
+    expiration_date=date(2028, 7, 1)
     st.write("Approval date range:", start_date, "to", end_date, "; Expiration date:", expiration_date) #, end_date)
 except Exception as e:
     st.error(f"Error in slider configuration: {e}")
