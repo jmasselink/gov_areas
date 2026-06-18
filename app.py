@@ -3,7 +3,6 @@ import geopandas as gpd
 import pandas as pd
 import leafmap.foliumap as leafmap
 from datetime import datetime, date
-from pathlib import Path
 # import json
 
 page_title='SBA HUBZone Governor Designated Areas'
@@ -11,36 +10,13 @@ st.set_page_config(page_title)
 st.subheader(page_title)
 
 # Load the spatial data
-def validate_geojson(path_str):
-    path = Path(path_str)
-    if not path.exists():
-        raise FileNotFoundError(f"Missing data file: {path_str}")
-
-    # Detect Git LFS pointer content, which cannot be read as GeoJSON.
-    with path.open("r", encoding="utf-8", errors="ignore") as fh:
-        first_line = fh.readline().strip()
-
-    if first_line.startswith("version https://git-lfs.github.com/spec/v1"):
-        raise RuntimeError(
-            f"{path_str} is a Git LFS pointer, not actual GeoJSON data. "
-            "Ensure LFS objects are available in the deployment environment."
-        )
-
 @st.cache_data
 def load_data():
-    counties_path = 'data/20260505_gda_county.geojson'
-    tracts_path = 'data/20260505_gda_tract.geojson'
-    validate_geojson(counties_path)
-    validate_geojson(tracts_path)
-    counties = gpd.read_file(counties_path) #20240916_gov_area_county
-    tracts = gpd.read_file(tracts_path)
+    counties = gpd.read_file('data/20260505_gda_county.geojson') #20240916_gov_area_county
+    tracts = gpd.read_file('data/20260505_gda_tract.geojson')
     return counties, tracts
 
-try:
-    counties, tracts = load_data()
-except Exception as e:
-    st.error(f"Data load failed: {e}")
-    st.stop()
+counties, tracts = load_data()
 
 # Convert disaster declaration dates to datetime
 counties['date_approved'] = pd.to_datetime(counties['date_approved'], errors='coerce')
